@@ -28,10 +28,20 @@ const App = () => {
     console.log(data.hits);
   };
 
+  const updateSearch = (e) => {
+    setSearch(e.target.value); //value of input entered by user
+    console.log(search);
+  };
+
   return (
     <div className="App">
       <form className="search-form">
-        <input className="search-bar" type="text" value={search} />
+        <input
+          className="search-bar"
+          type="text"
+          value={search}
+          onChange={updateSearch}
+        />
         <button className="search-button" type="submit">
           Search
         </button>
