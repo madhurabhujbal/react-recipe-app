@@ -12,7 +12,11 @@ const App = () => {
   useEffect(() => {
     //runs every time page renders
     console.log("Effect has been run");
-  });
+  }, []); // [] will enable useEffect to run only once when page is rendered.
+
+  // useEffect(() => {
+  //   console.log("Effect has been run");
+  // }, [counter]); // [] will enable useEffect to run every time the counter changes its state
 
   return (
     <div className="App">
