@@ -10,7 +10,10 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Hello React</h1>
+      <form className="search-form">
+        <input className="search-bar" type="text" />
+        <button className="search-button">Search</button>
+      </form>
     </div>
   );
 };
