@@ -14,7 +14,7 @@ const App = () => {
   useEffect(() => {
     //runs every time page renders
     getRecipes();
-  }, []); // [] will enable useEffect to run only once when page is rendered.
+  }, [query]); // [] will enable useEffect to run only once when page is rendered.
 
   // useEffect(() => {
   //   console.log("Effect has been run");
@@ -31,7 +31,6 @@ const App = () => {
 
   const updateSearch = (e) => {
     setSearch(e.target.value); //value of input entered by user
-    console.log(search);
   };
 
   const getSearch = (e) => {
