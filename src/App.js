@@ -8,6 +8,7 @@ const App = () => {
   const APP_KEY = "ab47742811a6686862dfffde29f0722f";
 
   const [recipes, setRecipes] = useState([]); //All recipes are stored in 'recipes' through setRecipes
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     //runs every time page renders
@@ -30,14 +31,14 @@ const App = () => {
   return (
     <div className="App">
       <form className="search-form">
-        <input className="search-bar" type="text" />
+        <input className="search-bar" type="text" value={search} />
         <button className="search-button" type="submit">
           Search
         </button>
       </form>
       {recipes.map((recipe) => (
         <Recipe
-          key={recipe.recipe.label}
+          key={recipe.recipe.label} //Next 3 properties are called props which are simple objects in JS. key is spcl prop
           title={recipe.recipe.label}
           calories={recipe.recipe.calories}
           image={recipe.recipe.image}
