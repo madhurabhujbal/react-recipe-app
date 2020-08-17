@@ -9,6 +9,7 @@ const App = () => {
 
   const [recipes, setRecipes] = useState([]); //All recipes are stored in 'recipes' through setRecipes
   const [search, setSearch] = useState("");
+  const [query, setQuery] = useState("chicken");
 
   useEffect(() => {
     //runs every time page renders
@@ -21,7 +22,7 @@ const App = () => {
 
   const getRecipes = async () => {
     const response = await fetch(
-      `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`
+      `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     const data = await response.json();
     setRecipes(data.hits);
@@ -33,9 +34,15 @@ const App = () => {
     console.log(search);
   };
 
+  const getSearch = (e) => {
+    //Call this function only when search button is clicked
+    e.preventDefault(); //prevents search as user types in search field
+    setQuery(search);
+  };
+
   return (
     <div className="App">
-      <form className="search-form">
+      <form onSubmit={getSearch} className="search-form">
         <input
           className="search-bar"
           type="text"
