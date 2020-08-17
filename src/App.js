@@ -7,7 +7,7 @@ const App = () => {
   const APP_ID = "449006bf";
   const APP_KEY = "ab47742811a6686862dfffde29f0722f";
 
-  const [recipes, setRecipes] = useState([]);
+  const [recipes, setRecipes] = useState([]); //All recipes are stored in 'recipes' through setRecipes
 
   useEffect(() => {
     //runs every time page renders
@@ -24,6 +24,7 @@ const App = () => {
     );
     const data = await response.json();
     setRecipes(data.hits);
+    console.log(data.hits);
   };
 
   return (
@@ -34,6 +35,9 @@ const App = () => {
           Search
         </button>
       </form>
+      {recipes.map((recipe) => (
+        <Recipe />
+      ))}
     </div>
   );
 };
