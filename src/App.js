@@ -37,6 +37,7 @@ const App = () => {
     //Call this function only when search button is clicked
     e.preventDefault(); //prevents search as user types in search field
     setQuery(search);
+    setSearch("");
   };
 
   return (
