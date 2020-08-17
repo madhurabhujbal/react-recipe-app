@@ -10,6 +10,7 @@ const App = () => {
   const [counter, setCounter] = useState(0);
 
   useEffect(() => {
+    //runs every time page renders
     console.log("Effect has been run");
   });
 
@@ -21,7 +22,7 @@ const App = () => {
           Search
         </button>
       </form>
-      {/* <h1 onClick={() => setCounter(counter + 1)}> {counter} </h1> */}
+      <h1 onClick={() => setCounter(counter + 1)}> {counter} </h1>
     </div>
   );
 };
