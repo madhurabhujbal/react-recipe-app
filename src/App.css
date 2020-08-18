@@ -25,3 +25,9 @@
   font-size: large;
   font-weight: bold;
 }
+
+.recipes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
