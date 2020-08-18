@@ -15,3 +15,13 @@
   height: 30px;
   border: none;
 }
+
+.search-button {
+  min-height: 30px;
+  background: lightblue;
+  border: none;
+  padding: 10px 20px;
+  color: #0e1d36;
+  font-size: large;
+  font-weight: bold;
+}
