@@ -59,6 +59,7 @@ const App = () => {
             key={recipe.recipe.label} //Next 3 properties are called props which are simple objects in JS. key is spcl prop
             title={recipe.recipe.label}
             calories={recipe.recipe.calories}
+            dietLabels={recipe.recipe.dietLabels}
             image={recipe.recipe.image}
             ingredients={recipe.recipe.ingredients}
           />
