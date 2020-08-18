@@ -11,7 +11,8 @@ const Recipe = ({ title, calories, dietLabels, image, ingredients }) => {
         ))}
       </ol>
       <p>
-        {"Calories: " + calories} {"Diet Labels: " + dietLabels}
+        {"Calories: " + calories.toFixed(2) + "C"}
+        {"Diet Labels: " + dietLabels}
       </p>
       <img className={style.image} src={image} alt="recipe-image" />
     </div>
