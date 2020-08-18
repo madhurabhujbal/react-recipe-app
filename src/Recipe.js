@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./recipe.module.css";
 
-const Recipe = ({ title, calories, image, ingredients }) => {
+const Recipe = ({ title, calories, dietLabels, image, ingredients }) => {
   return (
     <div className={style.recipe}>
       <h1>{title}</h1>
@@ -10,7 +10,10 @@ const Recipe = ({ title, calories, image, ingredients }) => {
           <li>{ingredient.text}</li>
         ))}
       </ol>
-      <p>{"Calories: " + calories}</p>
+      <p style={{ color: "red", fontWeight: "bold" }}>
+        {"Calories: " + calories.toFixed(2) + "C"} &nbsp;
+        {"Diet Labels: " + dietLabels}
+      </p>
       <img className={style.image} src={image} alt="recipe-image" />
     </div>
   );

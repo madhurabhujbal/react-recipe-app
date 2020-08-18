@@ -11,9 +11,11 @@
 }
 
 .search-bar {
-  width: 50%;
+  width: 30%;
   height: 30px;
   border: none;
+  margin-right: 10px;
+  font-size: 20px;
 }
 
 .search-button {
