@@ -10,7 +10,7 @@ const Recipe = ({ title, calories, dietLabels, image, ingredients }) => {
           <li>{ingredient.text}</li>
         ))}
       </ol>
-      <p>
+      <p style={{ color: "red", fontWeight: "bold" }}>
         {"Calories: " + calories.toFixed(2) + "C"} &nbsp;
         {"Diet Labels: " + dietLabels}
       </p>
