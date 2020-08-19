@@ -9,10 +9,9 @@ const Recipe = ({
   ingredients,
   recipeUrl,
 }) => {
-  console.log(recipeUrl);
   return (
     <div className={style.recipe}>
-      <a href="">
+      <a href={recipeUrl}>
         <h1>{title}</h1>
       </a>
       <ol>
