@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Recipe from "./Recipe";
 import "./App.css";
+import Navbar from "../src/components/navbar";
 
 const App = () => {
   //id and key for edamam.com REST API for recipe request
@@ -42,17 +43,19 @@ const App = () => {
 
   return (
     <div className="App">
-      <form onSubmit={getSearch} className="search-form">
-        <input
-          className="search-bar"
-          type="text"
-          value={search}
-          onChange={updateSearch}
-        />
-        <button className="search-button" type="submit">
-          Search
-        </button>
-      </form>
+      <Navbar>
+        <form onSubmit={getSearch} className="search-form">
+          <input
+            className="search-bar"
+            type="text"
+            value={search}
+            onChange={updateSearch}
+          />
+          <button className="search-button" type="submit">
+            Search
+          </button>
+        </form>
+      </Navbar>
       <div className="recipes">
         {recipes.map((recipe) => (
           <Recipe
