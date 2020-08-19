@@ -20,7 +20,7 @@ const Recipe = ({
         ))}
       </ol>
       <p style={{ color: "red", fontWeight: "bold" }}>
-        {"Calories: " + calories.toFixed(2) + "C"} &nbsp;
+        {"Calories: " + calories.toFixed(2) + "C"} &nbsp; &nbsp;
         {"Diet Labels: " +
           (dietLabels.length !== 0 ? dietLabels : "Currently not available")}
       </p>
