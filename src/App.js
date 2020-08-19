@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Recipe from "./Recipe";
 import "./App.css";
+import Navbar from "../src/components/navbar";
 
 const App = () => {
   //id and key for edamam.com REST API for recipe request
@@ -42,26 +43,29 @@ const App = () => {
 
   return (
     <div className="App">
-      <form onSubmit={getSearch} className="search-form">
-        <input
-          className="search-bar"
-          type="text"
-          value={search}
-          onChange={updateSearch}
-        />
-        <button className="search-button" type="submit">
-          Search
-        </button>
-      </form>
+      <Navbar>
+        <form onSubmit={getSearch} className="search-form">
+          <input
+            className="search-bar"
+            type="text"
+            value={search}
+            onChange={updateSearch}
+          />
+          <button className="search-button" type="submit">
+            Search
+          </button>
+        </form>
+      </Navbar>
       <div className="recipes">
         {recipes.map((recipe) => (
           <Recipe
-            key={recipe.recipe.label} //Next 3 properties are called props which are simple objects in JS. key is spcl prop
+            key={recipe.recipe.label} //Next properties are called props which are simple objects in JS. key is spcl prop
             title={recipe.recipe.label}
             calories={recipe.recipe.calories}
             dietLabels={recipe.recipe.dietLabels}
             image={recipe.recipe.image}
             ingredients={recipe.recipe.ingredients}
+            recipeUrl={recipe.recipe.url}
           />
         ))}
       </div>
