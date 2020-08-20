@@ -9,6 +9,9 @@ export default class Navbar extends Component {
     return (
       <div>
         <form onSubmit={getSearch} className="search-form">
+          <a href="#">
+            <button className="home-button">Home</button>
+          </a>
           <input
             className="search-bar"
             type="text"
