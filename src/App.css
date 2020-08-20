@@ -11,19 +11,29 @@
 }
 
 .search-bar {
-  width: 30%;
-  height: 30px;
+  width: 50%;
+  height: 40px;
   border: none;
   margin-right: 10px;
   font-size: 20px;
+  text-align: center;
 }
 
 .search-button {
   min-height: 30px;
   background: lightblue;
-  border: none;
   padding: 10px 20px;
-  color: #0e1d36;
+  border-color: #0e1d36;
+  font-size: large;
+  font-weight: bold;
+}
+
+.home-button {
+  min-height: 30px;
+  background: rgb(177, 172, 172);
+  border-color: black;
+  padding: 10px 20px;
+  margin-right: 80px;
   font-size: large;
   font-weight: bold;
 }
