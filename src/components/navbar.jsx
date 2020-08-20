@@ -23,19 +23,3 @@ export default class Navbar extends Component {
     );
   }
 }
-
-// const Navbar = () => {
-//   const sayHello = this.props.sayHello;
-//   sayHello();
-//   return (
-//     <nav
-//       className="navbar navbar-dark bg-dark"
-//       style={{ minHeight: "180px", width: "100%", paddingTop: "20px" }}
-//     >
-//       <input className="search-bar" type="text" />
-//       <button className="search-button" type="submit">
-//         Search
-//       </button>
-//     </nav>
-//   );
-// };
