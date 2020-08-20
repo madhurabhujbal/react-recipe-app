@@ -47,6 +47,7 @@ const App = () => {
         getSearch={getSearch}
         updateSearch={updateSearch}
         search={search}
+        setQuery={setQuery}
       />
       <div className="recipes">
         {recipes.map((recipe) => (
