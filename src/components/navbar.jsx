@@ -5,14 +5,21 @@ export default class Navbar extends Component {
     // const getSearch = this.props.getSearch;
     // const updateSearch = this.props.updateSearch;
     // const search = this.props.search;
-    const { getSearch, updateSearch, search } = this.props;
+    const { getSearch, updateSearch, search, setQuery } = this.props;
     return (
       <div>
         <form onSubmit={getSearch} className="search-form">
-          <a href="">
-            <button className="home-button">Home</button>
-          </a>
           <input
+            type="button"
+            className="home-button"
+            onClick={() => {
+              setQuery("chicken");
+              // getRecipes();
+            }}
+            value="Home"
+          />
+          <input
+            autoFocus
             className="search-bar"
             type="text"
             value={search}
