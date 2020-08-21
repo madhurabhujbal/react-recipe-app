@@ -20,6 +20,11 @@
   box-shadow: -10px 10px 5px 0px rgb(102, 100, 100);
 }
 
+.search-bar:focus {
+  outline: none;
+  background: linear-gradient(135deg, #d4f3eb 0%, #dce9df 100%);
+}
+
 .search-button {
   min-height: 30px;
   background: lightblue;
