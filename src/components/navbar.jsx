@@ -19,7 +19,6 @@ export default class Navbar extends Component {
             value="Home"
           />
           <input
-            autoFocus
             className="search-bar"
             type="text"
             value={search}
